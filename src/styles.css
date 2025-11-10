@@ -1,0 +1,258 @@
+:root {
+  --bg: #ffffff;
+  --navy: #002b4d;
+  --blue: #00a4ff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --radius-xl: 20px;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --max-width: 1120px;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page {
+  min-height: 100vh;
+}
+
+/* NAV */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(148, 163, 253, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 32px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo {
+  width: 34px;
+  height: 34px;
+}
+
+.nav-brand {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 0.92rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.nav-cta {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+  padding: 80px 24px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+
+.hero p {
+  font-size: 1.02rem;
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.hero-actions {
+  margin: 22px 0 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.hero-tagline {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* BUTTONS */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-outline {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-alt {
+  background: #f9fafb;
+}
+
+.section h2 {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto 24px;
+  font-size: 1.7rem;
+  color: var(--navy);
+}
+
+.grid {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 18px 18px 16px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  font-size: 0.94rem;
+}
+
+/* PROCESS */
+
+.timeline {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.step {
+  background: white;
+  padding: 18px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.step-label {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+/* ABOUT */
+
+.about-text {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+/* FORM */
+
+.form {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.92rem;
+  font-family: var(--font);
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 20px 24px 26px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
